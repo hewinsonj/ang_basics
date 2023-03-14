@@ -16,4 +16,42 @@
     [disabled]=" username === '' "
     (click)="username = '' "
     >Reset User</button>
+
+  <button 
+    class="btn btn-primary"
+    (click)="toggleShowing()">
+    Display Details
+  </button>
+  <!-- <button 
+    class="btn btn-primary"
+    (click)="showing = !showing">
+    Display Details
+  </button> -->
+  <div>
+    <label>How many times you forgot??</label>
+    <p [ngStyle]="{backgroundColor: getColor()}">
+      {{ timesTried }}
+    </p>
+  </div>
+  <!-- <div [hidden]="showing">
+    <p>Secret Passwords:</p>
+    <p>paper</p>
+    <p>rock</p>
+    <p>knife</p>
+  </div> -->
+  <div *ngIf="showing">
+    <p>Secret Passwords:</p>
+    <p>paper</p>
+    <p>rock</p>
+    <p>knife</p>
+  </div>
+  <div *ngFor="let logItem of log"> 
+    {{ logItem }}
+  </div>
+  
+
+  <ng-template #blanken>
+    <p>can't tell you</p>
+</ng-template>
+  
 </div>
