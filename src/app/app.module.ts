@@ -14,7 +14,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     ServerComponent,
     ServersComponent,
     SuccessAlertComponent,
-    WarningAlertComponent
+    WarningAlertComponent,
+    
   ],
   imports: [
     BrowserModule,
